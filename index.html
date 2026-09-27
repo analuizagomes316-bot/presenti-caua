@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arquivo: Cauã // 2026</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    background:#08060d;
+    color:#eee;
+    font-family:Georgia,serif;
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+.screen{
+    min-height:100vh;
+    display:none;
+    padding:35px 22px;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    background:
+      radial-gradient(circle at top,#30145c55,transparent 45%),
+      #08060d;
+}
+
+.screen.active{
+    display:flex;
+    flex-direction:column;
+}
+
+h1{
+    color:#d9a7ff;
+    font-size:clamp(30px,9vw,55px);
+    margin-bottom:15px;
+    text-shadow:0 0 20px #9d4edd88;
+}
+
+h2{
+    color:#c77dff;
+    margin-bottom:15px;
+}
+
+p{
+    line-height:1.6;
+    color:#d5cddd;
+    max-width:600px;
+}
+
+.small{
+    font-size:13px;
+    color:#8f8598;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+button{
+    margin:10px;
+    padding:14px 25px;
+    border:1px solid #9d4edd;
+    border-radius:12px;
+    background:#170d24;
+    color:#f0d9ff;
+    font-size:16px;
+    cursor:pointer;
+    box-shadow:0 0 15px #7b2cb044;
+}
+
+button:hover{
+    background:#32104d;
+}
+
+.card{
+    width:min(100%,600px);
+    padding:28px 20px;
+    border:1px solid #6f3c91;
+    border-radius:20px;
+    background:#110c18dd;
+    box-shadow:0 0 30px #7b2cb033;
+}
+
+.photo{
+    width:100%;
+    height:220px;
+    border-radius:15px;
+    margin:18px 0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:1px dashed #8e55aa;
+    background:linear-gradient(135deg,#180d25,#32104d);
+    color:#a998b2;
+}
+
+.choice{
+    display:block;
+    width:90%;
+    max-width:420px;
+    margin:12px auto;
+}
+
+.fire{
+    font-size:90px;
+    animation:pulse 1.5s infinite;
+    filter:drop-shadow(0 0 25px #ff6d00);
+}
+
+@keyframes pulse{
+    50%{transform:scale(1.08)}
+}
+
+.flower{
+    display:inline-block;
+    margin:12px;
+    padding:20px;
+    font-size:45px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.flower:hover{
+    transform:scale(1.2);
+}
+
+.secret{
+    display:none;
+    margin:15px auto;
+    color:#e4b8ff;
+    max-width:450px;
+}
+
+#finalText{
+    font-size:18px;
+    line-height:1.8;
+}
+
+.boss{
+    font-size:70px;
+    margin:20px;
+}
+
+.progress{
+    color:#806b89;
+    margin-top:25px;
+    font-size:12px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- INTRO -->
+<section class="screen active" id="intro">
+    <div class="card">
+        <p class="small">ARQUIVO CONFIDENCIAL // 2026</p>
+        <h1>CAUÃ</h1>
+        <p>Um arquivo especial foi encontrado.</p>
+        <br>
+        <p>Responsável pelo arquivo:<br>
+        <b>uma certa bruxinha</b> 🖤</p>
+        <br>
+        <button onclick="go('inicio')">ABRIR ARQUIVO</button>
+    </div>
+</section>
+
+<!-- INICIO -->
+<section class="screen" id="inicio">
+    <div class="card">
+        <p class="small">MISSÃO PRINCIPAL</p>
+        <h1>Para Cauã</h1>
+        <p>
+        Você desbloqueou uma experiência extremamente suspeita.
+        Existem memórias, segredos e algumas informações
+        potencialmente constrangedoras neste arquivo.
+        </p>
+        <br>
+        <button onclick="go('nos')">INICIAR MISSÃO</button>
+    </div>
+</section>
+
+<!-- NÓS -->
+<section class="screen" id="nos">
+    <div class="card">
+        <p class="small">FASE I // NÓS</p>
+        <h2>Memória desbloqueada</h2>
+
+        <div class="photo">
+            📸<br>
+            FOTO DE VOCÊS AQUI
+        </div>
+
+        <p>
+        Algumas das minhas memórias favoritas começaram
+        simplesmente com nós dois sendo nós dois.
+        </p>
+
+        <br>
+
+        <button onclick="alert('MEMÓRIA DESBLOQUEADA: o primeiro picnic assistindo Hexatombe. 🖤')">
+            DESBLOQUEAR MEMÓRIA
+        </button>
+
+        <button onclick="go('caua')">PRÓXIMA FASE</button>
+
+        <p class="progress">01 / 06</p>
+    </div>
+</section>
+
+<!-- MUNDO DO CAUÃ -->
+<section class="screen" id="caua">
+    <div class="card">
+        <p class="small">FASE II // CHECKPOINT</p>
+
+        <div class="fire">🔥</div>
+
+        <h2>Checkpoint encontrado.</h2>
+
+        <p>
+        Você encontrou uma fogueira.
+        Ela aparentemente contém energia suficiente
+        para recuperar todos os seus pontos de vida.
+        </p>
+
+        <br>
+
+        <button onclick="alert('HP restaurado. +999 estilo por causa dos cachinhos.')">
+            ACENDER FOGUEIRA
+        </button>
+
+        <button onclick="go('alquimia')">
+            CONTINUAR
+        </button>
+
+        <p class="progress">02 / 06</p>
+    </div>
+</section>
+
+<!-- ALQUIMIA -->
+<section class="screen" id="alquimia">
+    <div class="card">
+        <p class="small">FASE III // ALQUIMIA</p>
+
+        <h1>⚗️</h1>
+        <h2>Transmutação</h2>
+
+        <p>
+        Para realizar uma transmutação, é necessário oferecer
+        algo de valor equivalente.
+        </p>
+
+        <br>
+
+        <button onclick="transmutar()">REALIZAR TRANSMUTAÇÃO</button>
+
+        <p id="resultadoAlquimia" class="secret"></p>
+
+        <button onclick="go('arquivo')">CONTINUAR</button>
+
+        <p class="progress">03 / 06</p>
+    </div>
+</section>
+
+<!-- ARQUIVO K -->
+<section class="screen" id="arquivo">
+    <div class="card">
+        <p class="small">ARQUIVO // K</p>
+
+        <h2>IDENTIDADE: KAISER</h2>
+
+        <p>
+        Dados encontrados:
+        </p>
+
+        <br>
+
+        <p>🟣 Cor favorita: roxo</p>
+        <p>🌹 Item raro: rosas e cinerárias</p>
+        <p>⚔️ Classe: sobrevivente</p>
+        <p>🌀 Afinidade: Ordem Paranormal</p>
+        <p>🔥 Fraqueza conhecida: ???</p>
+
+        <br>
+
+        <button onclick="mostrarSegredo()">
+            ACESSAR DADO CONFIDENCIAL
+        </button>
+
+        <p id="segredo" class="secret">
+            ⚠️ DADO EXTREMAMENTE CONFIDENCIAL:<br><br>
+            Cachinhos do Cauã: +999 estilo<br>
+            +1000 dano emocional<br>
+            +9999 na habilidade de fazer a bruxinha sorrir.
+        </p>
+
+        <button onclick="go('jardim')">PRÓXIMA FASE</button>
+
+        <p class="progress">04 / 06</p>
+    </div>
+</section>
+
+<!-- JARDIM -->
+<section class="screen" id="jardim">
+    <div class="card">
+        <p class="small">FASE V // JARDIM</p>
+
+        <h2>O jardim secreto</h2>
+
+        <p>
+        Algumas flores guardam mensagens.
+        Toque nelas para descobrir.
+        </p>
+
+        <div>
+            <span class="flower" onclick="flower(1)">🌹</span>
+            <span class="flower" onclick="flower(2)">🌸</span>
+            <span class="flower" onclick="flower(3)">🌹</span>
+        </div>
+
+        <p id="flowerText" class="secret"></p>
+
+        <br>
+
+        <button onclick="go('boss')">ENFRENTAR BOSS FINAL</button>
+
+        <p class="progress">05 / 06</p>
+    </div>
+</section>
+
+<!-- BOSS -->
+<section class="screen" id="boss">
+    <div class="card">
+
+        <p class="small">BOSS FINAL</p>
+
+        <div class="boss">👹</div>
+
+        <h2>O inimigo final</h2>
+
+        <p>
+        O boss representa tudo aquilo que tenta atrapalhar
+        duas pessoas que simplesmente querem ficar juntas.
+        </p>
+
+        <br>
+
+        <button onclick="attack()">ATACAR</button>
+
+        <p id="bossText" class="secret"></p>
+
+        <button onclick="go('final')">FINALIZAR MISSÃO</button>
+
+        <p class="progress">06 / 06</p>
+    </div>
+</section>
+
+<!-- FINAL -->
+<section class="screen" id="final">
+    <div class="card">
+
+        <p class="small">ARQUIVO CONCLUÍDO</p>
+
+        <h1>💜</h1>
+
+        <h2>Feliz aniversário, Cauã.</h2>
+
+        <div class="photo">
+            📸<br>
+            FOTO FINAL DE VOCÊS AQUI
+        </div>
+
+        <p id="finalText">
+        Eu poderia fazer um texto enorme tentando explicar
+        tudo que você significa pra mim, mas acho que algumas
+        coisas simplesmente não cabem em palavras.
+        <br><br>
+
+        Você é meu Cauã, meu menino dos cachinhos,
+        e uma das pessoas que tornou meus dias muito mais
+        especiais.
+        <br><br>
+
+        Obrigada por cada memória, cada risada, cada momento
+        e até pelas nossas pequenas maluquices.
+        <br><br>
+
+        E se existe uma coisa que eu escolheria em qualquer
+        universo, qualquer realidade e qualquer linha do tempo...
+        <br><br>
+
+        <b>seria encontrar você de novo.</b>
+        <br><br>
+
+        Com amor,<br>
+        sua bruxinha. 🖤
+        <br><br>
+
+        <i>“Tatuá mandeira — Cauã 2026”</i>
+        </p>
+
+        <br>
+
+        <h2>MISSÃO: CONCLUÍDA</h2>
+
+        <p>💜 100% AMOR DESBLOQUEADO 💜</p>
+
+    </div>
+</section>
+
+<script>
+
+function go(id){
+    document.querySelectorAll('.screen').forEach(s=>{
+        s.classList.remove('active');
+    });
+
+    document.getElementById(id).classList.add('active');
+
+    window.scrollTo(0,0);
+}
+
+function transmutar(){
+    const texto=document.getElementById("resultadoAlquimia");
+
+    texto.style.display="block";
+
+    texto.innerHTML=
+    "✨ TRANSMUTAÇÃO CONCLUÍDA ✨<br><br>" +
+    "Resultado:<br>" +
+    "<b>equivalência equivalente: NÓS.</b><br><br>" +
+    "Nenhum coração foi perdido durante o processo.";
+}
+
+function mostrarSegredo(){
+    document.getElementById("segredo").style.display="block";
+}
+
+function flower(n){
+
+    const text=document.getElementById("flowerText");
+
+    text.style.display="block";
+
+    if(n===1){
+        text.innerHTML=
+        "🌹 Rosa desbloqueada:<br><br>" +
+        "Você é uma das minhas pessoas favoritas.";
+    }
+
+    if(n===2){
+        text.innerHTML=
+        "🌸 Cinerária desbloqueada:<br><br>" +
+        "Eu amo construir memórias com você.";
+    }
+
+    if(n===3){
+        text.innerHTML=
+        "🌹 Flor rara desbloqueada:<br><br>" +
+        "Servidor de cunt detectado.<br>" +
+        "Estilo absurdo confirmado.";
+    }
+}
+
+function attack(){
+
+    const text=document.getElementById("bossText");
+
+    text.style.display="block";
+
+    text.innerHTML=
+    "⚔️ ATAQUE CRÍTICO!<br><br>" +
+    "O inimigo sofreu 9999 de dano.<br><br>" +
+    "Motivo: amor, carinho e uma quantidade preocupante de saudade.";
+}
+
+</script>
+
+</body>
+</html>
